@@ -19,3 +19,23 @@ spec:
         image: nginx:1.7.9
         ports:
         - containerPort: 80
+#This is a Kubernetes manifest file written in YAML format that describes a deployment of the Nginx web server. Here's what each section means:
+#apiVersion: apps/v1: This line specifies the Kubernetes API version and the type of Kubernetes resource being defined, which is a deployment in this case.
+#kind: Deployment: This line specifies that this is a deployment resource.
+#metadata: This section contains metadata about the deployment, such as the deployment name and labels that can be used to identify the deployment.
+#name: nginx-deployment: This line specifies the name of the deployment.
+#labels: This section specifies labels that can be used to identify the deployment. In this case, the deployment is labeled with app: nginx.
+#spec: This section specifies the desired state of the deployment.
+#replicas: 3: This line specifies that the desired number of replicas for this deployment is 3.
+#selector: This section specifies how the deployment should select which pods to manage.
+#matchLabels: This line specifies that the deployment should manage pods with the app: nginx label.
+#template: This section specifies the pod template that the deployment should use.
+#metadata: This section specifies metadata about the pod template.
+#labels: This line specifies the labels for the pod template.
+#app: nginx: This line specifies the label for the pod template.
+#spec: This section specifies the desired state of the pods.
+#containers: This section specifies the container specification for the pod.
+#name: nginx: This line specifies the name of the container.
+#image: nginx:1.7.9: This line specifies the Docker image for the container, which is the Nginx web server version 1.7.9.
+#ports: This section specifies the ports that the container should expose.
+#containerPort: 80: This line specifies that the container should expose port 80 for HTTP traffic.        
